@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import com.ai.poker.AI;
+import com.ai.poker.AIv2;
 import com.ai.poker.DIZHU;
 import com.ai.poker.P;
 import com.ai.poker.Poker;
@@ -339,7 +339,7 @@ public class PlayActivity extends NavigationMainActivity {
 		return false;
 	}
 	private AnimationEnum getPokerType(List<Poker> cards,int gender){
-		PokerGroupTypeEnum pgte = AI.getPokerGroupTypeEnum(Copy(cards));
+		PokerGroupTypeEnum pgte = AIv2.getPokerGroupTypeEnum(Copy(cards));
 		if(pgte==null)
 			return null;
 		if(pgte.equals(PokerGroupTypeEnum.BOMB) ||
@@ -509,9 +509,9 @@ public class PlayActivity extends NavigationMainActivity {
 		List<Poker> ownerPokers = Copy(pokers);
 		List<Poker> result = null;
 		if(isPositive){
-			result = AI.sendPokersActively(ownerPokers, getAIDIZHU(), getAIPokerNum());
+			result = AIv2.sendPokersActively(ownerPokers, getAIDIZHU(), getAIPokerNum());
 		}else{
-			result = AI.sendPokersNegatively(ownerPokers, getPrePokers(), getAIDIZHU());
+			result = AIv2.sendPokersNegatively(ownerPokers, getPrePokers(), getAIDIZHU());
 		}
 		//remove them from original pokers
 		if(result!=null)
@@ -845,7 +845,7 @@ public class PlayActivity extends NavigationMainActivity {
 		}
 	}
 	private int shouldHaveDiZHu(List<Poker> pokers){
-		return AI.CanJiaBei(pokers);
+		return AIv2.CanJiaBei(pokers);
 	}
 	private void removeRightBlockAndBlockText(Gamer gamer){
 		removeView(gamer.getBlockTextViewId());
@@ -988,7 +988,7 @@ public class PlayActivity extends NavigationMainActivity {
 		}
 	}
 	private void ChupaiOn(List<Poker> poker,boolean isbuchuclick){
-		PokerGroupTypeEnum pokerGroupTypeEnum = AI.getPokerGroupTypeEnum(poker);
+		PokerGroupTypeEnum pokerGroupTypeEnum = AIv2.getPokerGroupTypeEnum(poker);
 		if(pokerGroupTypeEnum==null){
 			showNoteNoRuleCards();
 			return;
@@ -997,7 +997,7 @@ public class PlayActivity extends NavigationMainActivity {
 			showBottomCards(poker,true);
 		}else{
 			List<Poker> prepokers = InvocationRecorder.instance().getLastPokers();
-			if(AI.compare(poker, prepokers) > 0){
+			if(AIv2.compare(poker, prepokers) > 0){
 				showBottomCards(poker,false);
 			}else{
 				showNoteNoRuleCards();
@@ -1131,7 +1131,7 @@ public class PlayActivity extends NavigationMainActivity {
 		if(pokerList.size()<=3)
 			return;
 		else{
-			List<Poker> result = AI.HintPokersActively(Copy(pokerList), getAIPokerNum(pokerList.size()));
+			List<Poker> result = AIv2.HintPokersActively(Copy(pokerList), getAIPokerNum(pokerList.size()));
 			if(result==null)
 				result = pokerList;
 			else{
@@ -1275,9 +1275,9 @@ public class PlayActivity extends NavigationMainActivity {
 				List<Poker> poker_list = Copy(getGamer(POSITION.BOTTOM).getPokers());
 				List<Poker> result = null;
 				if(InvocationRecorder.instance().isPositive(POSITION.BOTTOM)){
-					result = AI.sendPokersActively(poker_list, getAIDIZHU(), getAIPokerNum());
+					result = AIv2.sendPokersActively(poker_list, getAIDIZHU(), getAIPokerNum());
 				}else{
-					result = AI.sendPokersNegatively(poker_list, getPrePokers(), getAIDIZHU());
+					result = AIv2.sendPokersNegatively(poker_list, getPrePokers(), getAIDIZHU());
 				}
 				if(result==null){
 					showNoteNoBigCards();
