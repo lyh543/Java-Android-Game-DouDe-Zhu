@@ -47,7 +47,7 @@ public class SettingActivity extends CompsActivity{
 		float sb = getCurrentScreenBrightnessPercent();
 		List<SettingItem> items = new ArrayList<SettingItem>();
 		items.add(new SettingItem("背景音乐", mv,new MusicVolumeDragger()));
-		items.add(new SettingItem("\u97f3\u4e50\u8c03\u8282", lrv,new SoundEffectVolumeDragger()));
+		items.add(new SettingItem("音乐调节", lrv,new SoundEffectVolumeDragger()));
 		items.add(new SettingItem("屏幕亮度", sb,new ScreenBrightnessDragger()));
 		addItems(items);
 	}

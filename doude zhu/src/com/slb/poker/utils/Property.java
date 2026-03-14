@@ -12,7 +12,7 @@ public class Property {
 	public static String MUSIC_VOLUME_NAME = "music_volume";
 	public static String MUSIC_SOUND_EFFECT_NAME = "sound_effect";
 	public static String PLAYER_FORMAT_PATTERN_SHARED_REFERENCE_NAME = "name:%s\tcoins:%s\thead_img:%s\tgender:%s";
-public static String PLAYER_DEFAULT_NAME_SHARED_REFERENCE_NAME = "\u73a9\u5bb6";
+public static String PLAYER_DEFAULT_NAME_SHARED_REFERENCE_NAME = "玩家";
 	public static int PLAYER_DEFAULT_COIN_SHARED_REFERENCE_NAME = 50;
 	public static int PLAYER_DEFAULT_HEAD_IMG_SHARED_REFERENCE_NAME = R.drawable.head_defalut_nan;
 	public static int PLAYER_DEFAULT_GENDER_SHARED_REFERENCE_NAME = BOY;
@@ -34,7 +34,7 @@ public static String PLAYER_DEFAULT_NAME_SHARED_REFERENCE_NAME = "\u73a9\u5bb6";
 	};
 	public static String[] NAMES = new String[]{
 		"蓝色街灯","声死恋","现实主义","楚南伊人","灵夏星梦","月舞轻枫","冰雪丽人","最佳女配角","删除霉运","我不合群",
-		"凤舞九天","香水百合","傲天神域","夜伤魂","上帝审判","\u4e3a\u73a9\u5bb6南","第九艺术","紫金阁","死亡情緒","一份激情",
+		"凤舞九天","香水百合","傲天神域","夜伤魂","上帝审判","为玩家南","第九艺术","紫金阁","死亡情緒","一份激情",
 		"黑夜邪曲","剑与玫瑰","清风雨阁","血染半边天","盛世王朝","紫荆阁","似水中月","绯色之空","无从诉说","彼得潘√",
 		"死亡演绎","凌烟阁","醉羽帮","血修罗","屠妖教","沧海观","无量祠","无妄厦","amoヽ晴天","twinkle_微凉",
 		"秦携香","墨香阁","青龙坊","血花飘","索命舍","易筋刹","龙虎厦","金凤观","superman°","sily°小晴天",

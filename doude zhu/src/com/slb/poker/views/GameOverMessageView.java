@@ -127,7 +127,7 @@ public class GameOverMessageView extends SurfaceView implements SurfaceHolder.Ca
 		String coin = coins+"";
 		if(!coin.startsWith("-"))
 			coin = "+"+coin;
-		coin+="\u91d1\u5e01";
+		coin+="金币";
 		Paint paint = new Paint();
 		paint.setAlpha(alpha);
 		drawCharacter(canvas, left, top, coin,paint);
