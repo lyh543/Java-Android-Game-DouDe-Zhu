@@ -66,7 +66,7 @@ public class UpcomingActivity extends NavigationAbstractActivity{
 						startToAnotherActivityThroughOptions(PlayActivity.class, R.anim.quickly_fade_in,  R.anim.custom_fade_out);
 					}
 				}else{
-					setText(findViewById(R.id.full_ani_text_startgame, TextView.class),"»¹Ê£"+time+"Ãë¿ªÈü£¬ÇëÉÔºó");
+					setText(findViewById(R.id.full_ani_text_startgame, TextView.class),"è¿˜å‰©"+time+"ç§’å¼€èµ›ï¼Œè¯·ç¨å");
 				}
 			}};
 		timer.schedule(task, 500, 1000);
@@ -85,7 +85,7 @@ public class UpcomingActivity extends NavigationAbstractActivity{
 		});
 	}
 	private String getTitleText(){
-		return "Ïò×ó»¬¶¯ÆÁÄ»ÖÇÄÜÑ¡ÅÆ×óÒÆ¶¯";
+		return "å‘å·¦æ»‘åŠ¨å±å¹•æ™ºèƒ½é€‰ç‰Œå·¦ç§»åŠ¨";
 	}
 	@Override
 	protected void addView(View view, LayoutParams params) {

@@ -67,12 +67,12 @@ public class BoardActivity extends NavigationAbstractActivity{
 		List<Map<String,Object>> components = new ArrayList<Map<String,Object>>();
 		Map<String,Object> shop = new HashMap<String,Object>();
 		shop.put("viewid", storeViewid);
-		shop.put("text", "ÉÌ³¡");
+		shop.put("text", "å•†åœº");
 		shop.put("viewdrawableid", R.drawable.hall_btn_recharge);
 		components.add(shop);
 		Map<String,Object> setting = new HashMap<String, Object>();
 		setting.put("viewid", settingViewid);
-		setting.put("text","ÉèÖÃ");
+		setting.put("text","è®¾ç½®");
 		setting.put("viewdrawableid", R.drawable.hall_btn_set);
 		components.add(setting);
 		decorateComponents(components);
@@ -437,9 +437,9 @@ public class BoardActivity extends NavigationAbstractActivity{
 			else if(val == startViewid)
 				startToAnotherActivity(UpcomingActivity.class);
 			else if(val == hallMessageViewId)
-				showMessage("ÏûÏ¢¹¦ÄÜ»¹Î´¿ªÍ¨");
+				showMessage("æ¶ˆæ¯åŠŸèƒ½è¿˜æœªå¼€é€š");
 			else if(val == moreViewid)
-				showMessage("¸ü¶à¹¦ÄÜ»¹Î´¿ªÍ¨");
+				showMessage("æ›´å¤šåŠŸèƒ½è¿˜æœªå¼€é€š");
 			else if(val == voiceViewid)
 				triggerVoice();
 		}

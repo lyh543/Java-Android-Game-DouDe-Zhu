@@ -24,9 +24,9 @@ import android.widget.TextView;
 import android.widget.RelativeLayout.LayoutParams;
 
 public class ProfileActivity extends CompsActivity{
-	private String name_name = "ÓÃ»§Ãû";
-	private String gender_name = "ĞÔ±ğ";
-	private String header_name = "Í·Ïñ";
+	private String name_name = "ç”¨æˆ·å";
+	private String gender_name = "æ€§åˆ«";
+	private String header_name = "å¤´åƒ";
 	private int leftmargin = 30;
 	private int selectedBoxViewId = 0;
 	private int nameEditTextId = 0;
@@ -36,7 +36,7 @@ public class ProfileActivity extends CompsActivity{
 	private static Bitmap[] HeadImageViewBitmaps = null;
 	@Override
 	public String getCompsTitle() {
-		return "µµ°¸";
+		return "æ¡£æ¡ˆ";
 	}
 	@Override
 	public void dobody() {
@@ -54,7 +54,7 @@ public class ProfileActivity extends CompsActivity{
 	}
 	private void addSaveButtonView(int privousViewId){
 		Button btn = new Button(this);
-		btn.setText("È·ÈÏĞŞ¸Ä");
+		btn.setText("ç¡®è®¤ä¿®æ”¹");
 		btn.setTextSize(16);
 		btn.setOnClickListener(new SureModifyClickOperation());
 		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(0,0);
@@ -171,7 +171,7 @@ public class ProfileActivity extends CompsActivity{
 		gp.setId(genderRadioGroupId);
 		gp.setOrientation(RadioGroup.HORIZONTAL);
 		RadioButton btn1 = new RadioButton(this);
-		btn1.setText("ÄĞ");
+		btn1.setText("ç”·");
 		btn1.setId(genderRadioButtonNanId);
 		btn1.setOnClickListener(new OnClickListener() {
 			@Override
@@ -181,7 +181,7 @@ public class ProfileActivity extends CompsActivity{
 		});
 		gp.addView(btn1);
 		RadioButton btn2 = new RadioButton(this);
-		btn2.setText("Å®");
+		btn2.setText("å¥³");
 		btn2.setId(genderRadioButtonNvId);
 		btn2.setOnClickListener(new OnClickListener() {
 			@Override
@@ -264,10 +264,10 @@ public class ProfileActivity extends CompsActivity{
 			view.setClickable(false);
 			String name = valid(findViewById(nameEditTextId,EditText.class).getText().toString());
 			if(name.length()==0){
-				showMessage("ĞŞ¸ÄÊ§°Ü, Ãû³Æ²»ÄÜÎª¿Õ£¡");
+				showMessage("ä¿®æ”¹å¤±è´¥, åç§°ä¸èƒ½ä¸ºç©ºï¼");
 			}
 			else if(name.length()>8){
-				showMessage("ĞŞ¸ÄÊ§°Ü, Ãû³Æ²»ÄÜ³¬¹ı8¸ö×Ö·û£¡");
+				showMessage("ä¿®æ”¹å¤±è´¥, åç§°ä¸èƒ½è¶…è¿‡8ä¸ªå­—ç¬¦ï¼");
 			}else{
 				int checkedBtnId = findViewById(genderRadioGroupId,RadioGroup.class).getCheckedRadioButtonId();
 				int gender = checkedBtnId == genderRadioButtonNanId?Property.BOY:Property.GIRL;
@@ -277,7 +277,7 @@ public class ProfileActivity extends CompsActivity{
 				player.setGender(gender);
 				player.setHead_img(head_img_drawable_id);
 				savePlayer(player);
-				showMessage("ĞŞ¸Ä³É¹¦");
+				showMessage("ä¿®æ”¹æˆåŠŸ");
 			}
 			SoundEffectPlayer.getInstance().playClick();
 			view.setClickable(true);

@@ -1856,7 +1856,7 @@ public class PlayActivity extends NavigationMainActivity {
 	}
 	private TextView createHeadCoins(int coins,int coinViewId){
 		TextView textView = new TextView(this);
-		textView.setText("金币:"+coins);
+		textView.setText("閲戝竵:"+coins);
 		textView.setTextSize(11);
 		textView.setTextColor(Color.YELLOW);
 		textView.setId(coinViewId);

@@ -34,13 +34,13 @@ public abstract class CompsActivity extends NavigationAbstractActivity{
 		}
 	}
 	protected void setCompsTitle(String title){
-		if("ÉèÖÃ".equals(title)){
+		if("è®¾ç½®".equals(title)){
 			addLeftCharacterView(createCharacterView(R.drawable.title_font_0_shezhi_she));
 			addRightCharacterView(createCharacterView(R.drawable.title_font_0_shezhi_zhi));
-		}else if("³äÖµ".equals(title)){
+		}else if("å……å€¼".equals(title)){
 			addLeftCharacterView(createCharacterView(R.drawable.title_font_0_chong));
 			addRightCharacterView(createCharacterView(R.drawable.title_font_0_zhi));
-		}else if("µµ°¸".equals(title)){
+		}else if("æ¡£æ¡ˆ".equals(title)){
 			addLeftCharacterView(createCharacterView(R.drawable.title_font_dangan_dang));
 			addRightCharacterView(createCharacterView(R.drawable.title_font_dangan_an));
 		}

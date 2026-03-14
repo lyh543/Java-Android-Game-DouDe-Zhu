@@ -27,16 +27,16 @@ public class InterceptActivity extends NavigationMainActivity{
 	AlertDialog dialog =  null;
 	private void showCommonDialogMessage(String message){
 		AlertDialog.Builder normalDialog = new AlertDialog.Builder(InterceptActivity.this);
-	           normalDialog.setTitle("提醒");
+	           normalDialog.setTitle("鎻愰啋");
 	           normalDialog.setMessage(message);
-	           normalDialog.setPositiveButton("确定", 
+	           normalDialog.setPositiveButton("纭畾", 
 	               new DialogInterface.OnClickListener() {
 	               @Override
 	               public void onClick(DialogInterface dialog, int which) {
 	            	   startToAnotherActivity(BoardActivity.class);
 	               }
 	           });
-	           normalDialog.setNegativeButton("关闭", 
+	           normalDialog.setNegativeButton("鍏抽棴", 
 	               new DialogInterface.OnClickListener() {
 	               @Override
 	               public void onClick(DialogInterface dialog, int which) {

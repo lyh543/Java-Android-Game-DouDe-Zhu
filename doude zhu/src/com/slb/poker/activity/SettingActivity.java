@@ -34,7 +34,7 @@ public class SettingActivity extends CompsActivity{
 	}
 	@Override
 	public String getCompsTitle() {
-		return "ÉèÖÃ";
+		return "è®¾ç½®";
 	}
 	@Override
 	public void dobody() {
@@ -46,9 +46,9 @@ public class SettingActivity extends CompsActivity{
 		float lrv = getCurrentSoundEffectVolumePercent();
 		float sb = getCurrentScreenBrightnessPercent();
 		List<SettingItem> items = new ArrayList<SettingItem>();
-		items.add(new SettingItem("±³¾°ÒôÀÖ", mv,new MusicVolumeDragger()));
+		items.add(new SettingItem("èƒŒæ™¯éŸ³ä¹", mv,new MusicVolumeDragger()));
 		items.add(new SettingItem("\u97f3\u4e50\u8c03\u8282", lrv,new SoundEffectVolumeDragger()));
-		items.add(new SettingItem("ÆÁÄ»ÁÁ¶È", sb,new ScreenBrightnessDragger()));
+		items.add(new SettingItem("å±å¹•äº®åº¦", sb,new ScreenBrightnessDragger()));
 		addItems(items);
 	}
 	private void addItems(List<SettingItem> items){
