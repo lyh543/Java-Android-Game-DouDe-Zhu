@@ -928,10 +928,10 @@ public class PlayActivity extends NavigationMainActivity {
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				if(event.getAction() == MotionEvent.ACTION_DOWN){
-					TouchLocRecorder.instance().setBegin(new Point(event.getX(), event.getY()));
+					TouchLocRecorder.instance().setBegin(new Point(event.getRawX(), event.getRawY()));
 					return true;
 				}else if(event.getAction() == MotionEvent.ACTION_UP){
-					TouchLocRecorder.instance().setEnd(new Point(event.getX(), event.getY()));
+					TouchLocRecorder.instance().setEnd(new Point(event.getRawX(), event.getRawY()));
 					DistributePokerArea();
 					drawAllPreSelectedView();
 					checkReSelectAndChuPaiButton();
@@ -1856,7 +1856,7 @@ public class PlayActivity extends NavigationMainActivity {
 	}
 	private TextView createHeadCoins(int coins,int coinViewId){
 		TextView textView = new TextView(this);
-		textView.setText("Ω±“:"+coins);
+		textView.setText("ÈáëÂ∏Å:"+coins);
 		textView.setTextSize(11);
 		textView.setTextColor(Color.YELLOW);
 		textView.setId(coinViewId);
