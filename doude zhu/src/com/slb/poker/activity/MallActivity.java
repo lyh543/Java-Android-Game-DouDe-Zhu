@@ -186,16 +186,16 @@ public class MallActivity extends CompsActivity{
 	public void dobody() {
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map = new HashMap<String,Object>();
-		map.put("title", "购买黄金VIP");
+		map.put("title", "\u66f4\u591a\u73a9\u5bb6VIP");
 		map.put("subtitle", "包月只需10元，享黄金VIP特权");
 		map.put("price", "10.00");
-		map.put("discount", "500金币");
+		map.put("discount", "500\u91d1\u5e01");
 		map.put("message", "恭喜您！您已<title>,成功获得<discount>");
 		
 		list.add(map);
 		
 		Map<String,Object> map2 = new HashMap<String,Object>();
-		map2.put("title", "购买黄金VIP");
+		map2.put("title", "\u66f4\u591a\u73a9\u5bb6VIP");
 		map2.put("subtitle", "包月只需15元，享黄金VIP特权");
 		map2.put("price", "15.00");
 		map2.put("discount", "1000金币");
@@ -203,15 +203,15 @@ public class MallActivity extends CompsActivity{
 		list.add(map2);
 
 		Map<String,Object> map3 = new HashMap<String,Object>();
-		map3.put("title", "购买黄金VIP");
+		map3.put("title", "\u66f4\u591a\u73a9\u5bb6VIP");
 		map3.put("subtitle", "包月只需20元，享黄金VIP特权");
 		map3.put("price", "20.00");
-		map3.put("discount", "1500金币");
+		map3.put("discount", "1500\u91d1\u5e01");
 		map3.put("message", "恭喜您！您已<title>,成功获得<discount>");
 		list.add(map3);
 
 		Map<String,Object> map4 = new HashMap<String,Object>();
-		map4.put("title", "购买黄金VIP");
+		map4.put("title", "\u66f4\u591a\u73a9\u5bb6VIP");
 		map4.put("subtitle", "包月只需25元，享黄金VIP特权");
 		map4.put("price", "25.00");
 		map4.put("discount", "2000金币");

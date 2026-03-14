@@ -127,7 +127,7 @@ public class GameOverMessageView extends SurfaceView implements SurfaceHolder.Ca
 		String coin = coins+"";
 		if(!coin.startsWith("-"))
 			coin = "+"+coin;
-		coin+="½ð±Ò";
+		coin+="\u91d1\u5e01";
 		Paint paint = new Paint();
 		paint.setAlpha(alpha);
 		drawCharacter(canvas, left, top, coin,paint);
@@ -183,10 +183,10 @@ public class GameOverMessageView extends SurfaceView implements SurfaceHolder.Ca
 			case '9':
 				drawableId = R.drawable.goldnum_1_nine;
 				break;
-			case '½ð':
+			case '@':
 				drawableId = R.drawable.goldnum_1_jing;
 				break;
-			case '±Ò':
+			case '#':
 				drawableId = R.drawable.goldnum_1_bi;
 				break;
 		}

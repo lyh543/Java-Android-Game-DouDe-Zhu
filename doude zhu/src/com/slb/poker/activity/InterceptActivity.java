@@ -17,7 +17,7 @@ public class InterceptActivity extends NavigationMainActivity{
 	@Override
 	protected void onStart() {
 		super.onStart();
-		showCommonDialogMessage("你已经退出游戏！");
+		showCommonDialogMessage("\u60a8\u5df2\u7ecf\u9000\u51fa\u6e38\u620f\u4e86");
 	}
 	@Override
 	protected void onStop() {
