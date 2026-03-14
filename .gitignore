@@ -1,0 +1,22 @@
+# Build outputs
+bin/
+build/
+gen/
+*.class
+*.dex
+*.apk
+*.ap_
+*.idsig
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local config
+ant.properties
+local.properties
