@@ -2,8 +2,6 @@ package com.slb.poker.activity;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import com.slb.poker.R;
 import com.slb.poker.listener.CallViewListener;
@@ -17,8 +15,6 @@ import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 public class UpcomingActivity extends NavigationAbstractActivity{
-	int time = 0;
-	Timer timer = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,7 +24,6 @@ public class UpcomingActivity extends NavigationAbstractActivity{
 	@Override
 	protected void ViewAfterShow(int viewID, int width, int height) {
 		if(viewID == R.id.giveupgameclickid){
-			time = 5;
 			Map<String,String> map = new HashMap<String,String>();
 			map.put(Property.TYPE_IDENTITY, "giveup");
 			addToClickScaleView(findViewById(R.id.giveupgameclickid, ImageView.class), 
@@ -53,42 +48,14 @@ public class UpcomingActivity extends NavigationAbstractActivity{
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if(timer!=null)
-			stopTimer();
-		timer = new Timer();
-		TimerTask task = new TimerTask(){
-			@Override
-			public void run() {
-				time--;
-				if(time<0){
-					stopTimer();
-					if(hasWindowFocus()){
-						startToAnotherActivityThroughOptions(PlayActivity.class, R.anim.quickly_fade_in,  R.anim.custom_fade_out);
-					}
-				}else{
-					setText(findViewById(R.id.full_ani_text_startgame, TextView.class),"还剩"+time+"秒开赛，请稍后");
-				}
-			}};
-		timer.schedule(task, 500, 1000);
-	}
-	@Override
-	protected void onPause() {
-		stopTimer();
-		super.onPause();
-	}
-	private void setText(final TextView textView,final String text){
-		textView.post(new Runnable() {
-			@Override
-			public void run() {
-				textView.setText(text);
-			}
-		});
-	}
-	private String getTitleText(){
-		return "向左滑动屏幕智能选牌左移动";
+		// 立即开始游戏，无需等待倒计时
+		startToAnotherActivityThroughOptions(PlayActivity.class, R.anim.quickly_fade_in, R.anim.custom_fade_out);
 	}
 	@Override
 	protected void addView(View view, LayoutParams params) {
+	}
+	private String getTitleText(){
+		return "向左滑动屏幕智能选牌左移动";
 	}
 	@Override
 	protected void removeView(View view) {
@@ -97,21 +64,12 @@ public class UpcomingActivity extends NavigationAbstractActivity{
 		@Override
 		public void call(View v, Map<?, ?> map) {
 			if(map.get(Property.TYPE_IDENTITY).equals("giveup")){
-				stopTimer();
 				finishedActivity();
 			}
 		}
 	}
 	@Override
 	public void onBackPressed() {
-		stopTimer();
 		super.onBackPressed();
-	}
-	private void stopTimer(){
-		if(timer!=null){
-			timer.cancel();
-			timer.purge();
-			timer=null;
-		}
 	}
 }
